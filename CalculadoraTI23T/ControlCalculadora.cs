@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.IO.Pipes;
 using System.Linq;
+using System.Runtime.Remoting.Messaging;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -73,6 +74,7 @@ namespace CalculadoraTI23T
                     case 0:
                         Console.WriteLine("Obrigado!");
                         break;//Encerra a execução
+
                     case 1:
                         this.coletar();//Pegar o que o usuario está digitando
                         Console.WriteLine("A soma é: " + this.model.somar());
@@ -81,10 +83,12 @@ namespace CalculadoraTI23T
                         this.coletar();//Pegar o que o usuario está digitando
                         Console.WriteLine("A subtração é: " + this.model.subtrair());
                         break;//Encerra a execução
+
                     case 3:
                         this.coletar();//Pegar o que o usuario está digitando
                         Console.WriteLine("A multiplicação é: " + this.model.multiplicar());
                         break;//Encerra a execução
+
                     case 4:
                         this.coletar();//Pegar o que o usuario está digitando
                         if (this.model.dividir() == -1)
@@ -96,52 +100,132 @@ namespace CalculadoraTI23T
                             Console.WriteLine("A divisão é: " + this.model.dividir());
                         }
                         break;//Encerra a execução
+
                     case 5:
                         this.coletar();//Pegar o que o usuario está digitando
                         Console.WriteLine("A potência é: " + this.model.potencia());
                         break;
+
                     case 6:
                         Console.WriteLine("Informe um número: ");
                         this.model.setNum1(Convert.ToInt32(Console.ReadLine()));
 
                         Console.WriteLine("A matriz do primeiro número é: " + this.model.raizPrimeiroNumero());
                         break;
+
                     case 7:
                         Console.WriteLine("Informe um número: ");
                         this.model.setNum2(Convert.ToInt32(Console.ReadLine()));
 
                         Console.WriteLine("A matriz do segundo número é: " + this.model.raizSegundoNumero());
                         break;
+
                     case 8:
                         Console.WriteLine("Informe um número: ");
                         int num = Convert.ToInt32(Console.ReadLine());//Variável local para guardar o número
                         //Para chamar a tabuada
                         Console.WriteLine(this.model.tabuada(num));
                         break;
+
                     case 9:
                         Console.WriteLine("Informe um ano: ");
                         int ano = Convert.ToInt32(Console.ReadLine());
+
                         //Chamar o método do Bissexto
                         Console.WriteLine(this.model.bissexto(ano));
                         break;
+
                     case 10:
+
                     case 11:
+                        Console.WriteLine("Informe a sua idade: ");
+                        int idade = Convert.ToInt32(Console.ReadLine());
+
+                        //Chamar o método de verificação de idade para voto
+                        Console.WriteLine(this.model.verificarIdadeVoto(idade));
+                        break;
+
                     case 12:
                     case 13:
                     case 14:
+                        Console.WriteLine("Informe um número: ");
+                        int dia = Convert.ToInt32(Console.ReadLine());
+
+                        //Chamar o método de definição do dia da semana
+                        Console.WriteLine(this.model.verificarDia(dia));
+                        break;
+
                     case 15:
                     case 16:
                     case 17:
                     case 18:
                     case 19:
                     case 20:
+
                     case 21:
+                        Console.WriteLine(this.model.maiorMenor());
+                        break;
+
                     case 22:
+                        Console.WriteLine("Informe a sua idade: ");
+                        idade = Convert.ToInt32(Console.ReadLine());
+
+                        //Chamar o método de classificação de idade
+                        Console.WriteLine(this.model.classificarIdade(idade));
+                        break;
+
                     case 23:
+                        double peso = 0;
+                        double altura = 0;
+                        do {
+                            Console.WriteLine("Informe o seu peso: ");
+                            peso = Convert.ToInt32(Console.ReadLine());
+                            if (peso <= 0)
+                            {
+                                Console.WriteLine("Erro! Informe um peso válido!");
+                            }
+                        } while (peso > 0);
+
+                        do
+                        {
+                            Console.WriteLine("Informe a sua altura: ");
+                            altura = Convert.ToInt32(Console.ReadLine());
+                            if (altura <= 0)
+                            {
+                                Console.WriteLine("Erro! Informe uma altura válida");
+                            }
+                        } while (altura == 0);
+
+                        //Chamar o método de cálculo do IMC
+                        Console.WriteLine(this.model.calculoIMC(peso, altura));
+                        break;
+
                     case 24:
+                        Console.WriteLine("Informe um número: ");
+                        int number = Convert.ToInt32(Console.ReadLine());
+
+                        //Chamar o método de verificação
+                        Console.WriteLine(this.model.verificarValor(number));
+                        break;
+
                     case 25:
+                        Console.WriteLine("Informe um número: ");
+                        int numero = Convert.ToInt32(Console.ReadLine());
+
+                        //Chamar o método de verificação do número
+                        Console.WriteLine(this.model.verificarParImpar(numero));
+                        break;
+
                     case 26:
+
                     case 27:
+                        Console.WriteLine("Informe a sua idade: ");
+                        int idades = Convert.ToInt32(Console.ReadLine());
+
+                        //Chamar o método de verificação da Tarifa
+                        Console.WriteLine(this.model.verificarTarifa(idades));
+                        break;
+
                     default:
                         Console.WriteLine("Informe um valor correto!");
                         break;
@@ -157,5 +241,6 @@ namespace CalculadoraTI23T
             Console.Write("Informe o segundo número: ");
             this.model.setNum2(Convert.ToDouble(Console.ReadLine()));//Peguei o segundo número
         }
+
     }//fim da classe
 }//fim do projeto
