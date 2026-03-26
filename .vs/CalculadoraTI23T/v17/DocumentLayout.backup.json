@@ -3,7 +3,7 @@
   "WorkspaceRootPath": "C:\\Users\\kathelyn.csantana\\source\\repos\\CalculadoraTI23T\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{E9F196DB-D236-4F73-99FF-FF2272348B17}|CalculadoraTI23T\\CalculadoraTI23T.csproj|c:\\users\\kathelyn.csantana\\source\\repos\\calculadorati23t\\calculadorati23t\\controlcalculadora.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{E9F196DB-D236-4F73-99FF-FF2272348B17}|CalculadoraTI23T\\CalculadoraTI23T.csproj|C:\\Users\\kathelyn.csantana\\source\\repos\\CalculadoraTI23T\\calculadorati23t\\controlcalculadora.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E9F196DB-D236-4F73-99FF-FF2272348B17}|CalculadoraTI23T\\CalculadoraTI23T.csproj|solutionrelative:calculadorati23t\\controlcalculadora.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -28,7 +28,7 @@
               "RelativeDocumentMoniker": "CalculadoraTI23T\\ControlCalculadora.cs",
               "ToolTip": "C:\\Users\\kathelyn.csantana\\source\\repos\\CalculadoraTI23T\\CalculadoraTI23T\\ControlCalculadora.cs",
               "RelativeToolTip": "CalculadoraTI23T\\ControlCalculadora.cs",
-              "ViewState": "AgIAAHUAAAAAAAAAAAD4v5IAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAALAAAAAAAAAAAAAYwMIAAAAeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-03-24T16:46:19.428Z",
               "EditorCaption": ""
@@ -41,7 +41,7 @@
               "RelativeDocumentMoniker": "CalculadoraTI23T\\ModelCalculadora.cs",
               "ToolTip": "C:\\Users\\kathelyn.csantana\\source\\repos\\CalculadoraTI23T\\CalculadoraTI23T\\ModelCalculadora.cs",
               "RelativeToolTip": "CalculadoraTI23T\\ModelCalculadora.cs",
-              "ViewState": "AgIAAAgBAAAAAAAAAAAcwCoBAAAYAAAAAAAAAA==",
+              "ViewState": "AgIAABoBAAAAAAAAAAAkwDMBAAA3AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-03-24T16:43:39.438Z",
               "EditorCaption": ""

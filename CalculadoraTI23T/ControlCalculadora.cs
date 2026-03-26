@@ -136,6 +136,12 @@ namespace CalculadoraTI23T
                         break;
 
                     case 10:
+                        Console.WriteLine("Informe um número: ");
+                        int numero = Convert.ToInt32(Console.ReadLine());
+
+                        //Chamar a verificação do intervalo
+                        Console.WriteLine(this.model.verificarIntervalo(numero));
+                        break;
 
                     case 11:
                         Console.WriteLine("Informe a sua idade: ");
@@ -146,7 +152,36 @@ namespace CalculadoraTI23T
                         break;
 
                     case 12:
+                        //Definindo o intervalo de tempo...
+                        Console.WriteLine("Informe o início do intervalo de tempo: ");
+                        int iIntervalo = Convert.ToInt32(Console.ReadLine());
+
+                        Console.WriteLine("Informe o final do intervalo de tempo: ");
+                        int fIntervalo = Convert.ToInt32(Console.ReadLine());
+
+                        //Coletando o número...
+                        Console.WriteLine("Informe um número: ");
+                        int numm = Convert.ToInt32(Console.ReadLine());
+
+                        //Chamar a verificação do intervalo
+                        Console.WriteLine(this.model.numIntervalo(numm, iIntervalo, fIntervalo));
+                        break;
+
                     case 13:
+                        //Coletando os valores de cada lado do triângulo...
+                        Console.WriteLine("Informe o valor do primeiro lado: ");
+                        int lado1 = Convert.ToInt32(Console.ReadLine());
+
+                        Console.WriteLine("Informe o valor do segundo lado: ");
+                        int lado2 = Convert.ToInt32(Console.ReadLine());
+
+                        Console.WriteLine("Informe o valor do terceiro lado: ");
+                        int lado3 = Convert.ToInt32(Console.ReadLine());
+
+                        //Chamar o método de verificação do tipo de triângulo
+                        Console.WriteLine(this.model.verificarTriangulo(lado1, lado2, lado3));
+                        break;
+
                     case 14:
                         Console.WriteLine("Informe um número: ");
                         int dia = Convert.ToInt32(Console.ReadLine());
@@ -156,11 +191,43 @@ namespace CalculadoraTI23T
                         break;
 
                     case 15:
+                        this.model.verificarSenha();
+                        break;
+
                     case 16:
+                        //Coletando os horários...
+                        Console.WriteLine("Informe o primeiro horário: ");
+                        int hora1 = Convert.ToInt32(Console.ReadLine());
+
+                        Console.WriteLine("Informe o segundo horário: ");
+                        int hora2 = Convert.ToInt32(Console.ReadLine());
+
+                        //Chamando o método de verificação do horário
+                        Console.WriteLine(this.model.verificarHorario(hora1, hora2));
+                        break;
+
                     case 17:
+                        Console.WriteLine("Informe o primeiro número: ");
+                        int num1 = Convert.ToInt32(Console.ReadLine());
+
+                        Console.WriteLine("Informe o segundo número: ");
+                        int num2 = Convert.ToInt32(Console.ReadLine());
+
+                        //Chamar a verificação do maior número
+                        Console.WriteLine(this.model.verificarMaiorMenor(num1, num2));
+                        break;
+
                     case 18:
+                        this.model.mediaNumeros();
+                        break;
+
                     case 19:
+                        this.model.somaNum();
+                        break;
+
                     case 20:
+                        this.model.lerSenha();
+                        break;
 
                     case 21:
                         Console.WriteLine(this.model.maiorMenor());
@@ -177,24 +244,29 @@ namespace CalculadoraTI23T
                     case 23:
                         double peso = 0;
                         double altura = 0;
-                        do {
+
+                        //Coletando e verificando os valores...
+                        //Informando o peso...
+                        do
+                        {
                             Console.WriteLine("Informe o seu peso: ");
-                            peso = Convert.ToInt32(Console.ReadLine());
+                            peso = Convert.ToDouble(Console.ReadLine());
                             if (peso <= 0)
                             {
                                 Console.WriteLine("Erro! Informe um peso válido!");
                             }
-                        } while (peso > 0);
+                        } while (peso <= 0);
 
+                        //Informando a altura...
                         do
                         {
                             Console.WriteLine("Informe a sua altura: ");
-                            altura = Convert.ToInt32(Console.ReadLine());
+                            altura = Convert.ToDouble(Console.ReadLine());
                             if (altura <= 0)
                             {
-                                Console.WriteLine("Erro! Informe uma altura válida");
+                                Console.WriteLine("Erro! Informe uma altura válida!");
                             }
-                        } while (altura == 0);
+                        } while (altura <= 0);
 
                         //Chamar o método de cálculo do IMC
                         Console.WriteLine(this.model.calculoIMC(peso, altura));
@@ -210,13 +282,26 @@ namespace CalculadoraTI23T
 
                     case 25:
                         Console.WriteLine("Informe um número: ");
-                        int numero = Convert.ToInt32(Console.ReadLine());
+                        numero = Convert.ToInt32(Console.ReadLine());
 
                         //Chamar o método de verificação do número
                         Console.WriteLine(this.model.verificarParImpar(numero));
                         break;
 
                     case 26:
+                        //Coletando os valores...
+                        Console.WriteLine("Informe o primeiro número: ");
+                        int numero1 = Convert.ToInt32(Console.ReadLine());
+
+                        Console.WriteLine("Informe o segundo número: ");
+                        int numero2 = Convert.ToInt32(Console.ReadLine());
+
+                        Console.WriteLine("Informe o terceiro número: ");
+                        int numero3 = Convert.ToInt32(Console.ReadLine());
+
+                        //Chamar o método de resultados
+                        this.model.resultadosNum(numero1, numero2, numero3);
+                        break;
 
                     case 27:
                         Console.WriteLine("Informe a sua idade: ");
